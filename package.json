@@ -10,6 +10,7 @@
   "description": "Play Youtube music via command line",
   "main": "dist/index.js",
   "scripts": {
+    "start": "tsc -w --esModuleInterop",
     "build": "tsc --esModuleInterop"
   },
   "repository": {
@@ -30,7 +31,7 @@
     "puppeteer": "^1.17.0"
   },
   "devDependencies": {
-    "@types/keypress": "^2.0.30",
+    "@types/keypress.js": "^2.0.30",
     "@types/node": "^12.0.8",
     "@types/puppeteer": "^1.12.4"
   },

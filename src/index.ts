@@ -5,9 +5,7 @@ import program from 'commander'
 
 import App from './app'
 
-const runApp = async (program: program.Command) => {
-  const playlistUrl = program.playlist
-
+const runApp = async (playlistUrl: string) => {
   const app = new App()
   await app.init()
   await app.openPlaylist(playlistUrl)
@@ -17,7 +15,6 @@ const runApp = async (program: program.Command) => {
 }
 
 program
-  .option('-p, --playlist <playlist>', 'playlist')
+  .arguments('devtube <playlist>')
+  .action(runApp)
   .parse(process.argv)
-
-runApp(program)
