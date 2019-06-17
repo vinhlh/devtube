@@ -20,4 +20,4 @@ npm install -g devtube
 devtube <playlist>
 ```
 
-Example: `devtube "https://www.youtube.com/watch?v=xz7TbHXXV3o&list=RDxz7TbHXXV3o&start_radio=1"`
+Example: `devtube "https://www.youtube.com/watch?v=VjHMDlAPMUw"`
