@@ -98,7 +98,7 @@ class App {
 
     await this.page.evaluate(() => {
       const playButton = document.querySelector(
-        '.ytp-button.ytp-play-button-playlist'
+        '.ytp-button.ytp-play-button-playlist, .ytp-large-play-button.ytp-button'
       ) as HTMLElement
 
       if (playButton) {
