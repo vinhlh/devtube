@@ -126,10 +126,10 @@ class App {
       const getValue = (selector: string, fn = selectTextContent) => {
         const $el = document.querySelector(selector)
         if (!$el) {
-          return NOT_AVAILABLE
+          return 'N/A'
         }
 
-        return fn($el) || NOT_AVAILABLE
+        return fn($el) || 'N/A'
       }
 
       const timeCurrent = getValue('.ytp-time-current')

@@ -8,6 +8,12 @@ Play Youtube music via command line
 	<br>
 </p>
 
+## Features
+
+- No ads.
+
+- No auto paused (experiment).
+
 ## Install
 
 ```bash
