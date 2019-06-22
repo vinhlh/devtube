@@ -3,6 +3,13 @@ import chalk from 'chalk'
 import ora from 'ora'
 import keypress from 'keypress'
 
+declare global {
+  interface Window {
+    yt: any;
+    _lact: any;
+  }
+}
+
 const LISTEN_INTERVAL = 1000
 
 const NOT_AVAILABLE = 'N/A'
@@ -141,6 +148,17 @@ class App {
         '.ytp-play-button',
         $el => $el.getAttribute('title') === 'Pause (k)' ? 'true' : 'false'
       )
+
+      const $autoplayIcon: any = document.getElementById('.ytp-upnext-autoplay-icon')
+      if ($autoplayIcon) {
+        $autoplayIcon.click()
+      }
+
+      try {
+        // XXX: Try to inject Youtube activity check
+        window.yt.util.activity.getTimeSinceActive = () => 0
+        window._lact = +new Date()
+      } catch {}
 
       return {
         timeCurrent,
