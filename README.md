@@ -23,7 +23,16 @@ npm install -g devtube
 ## Usage
 
 ```bash
-devtube <playlist>
+devtube <playlistOrSearchKeyword>
 ```
 
 Example: `devtube "https://www.youtube.com/watch?v=VjHMDlAPMUw"`
+
+`devtube "Faded"`
+
+## CHANGELOGs
+
+### 1.0.6
+
+- Support starting by searching a keywod.
+Example: `devtube "Lost Frequencies"`.

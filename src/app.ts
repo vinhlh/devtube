@@ -68,7 +68,7 @@ class App {
 
   async initBrowser() {
     const browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       ignoreDefaultArgs: ['--mute-audio']
     })
 
@@ -120,7 +120,31 @@ class App {
       return
     }
 
+    if (!playlistUrl.startsWith('https://')) {
+      await this.searchAndPlayFirstResult(playlistUrl)
+      return
+    }
+
     await this.page.goto(playlistUrl)
+  }
+
+  async searchAndPlayFirstResult(searchTerm: string) {
+    await this.page.goto('https://www.youtube.com/')
+    await this.page.evaluate(searchTerm => {
+      const $input: any = document.querySelector('input#search')
+      if ($input) {
+        $input.value = searchTerm
+        document.getElementById('search-icon-legacy').click()
+      }
+    }, searchTerm)
+
+    await this.page.waitForNavigation()
+    await this.page.evaluate(() => {
+      const $firstResult: any = document.querySelector('.ytd-item-section-renderer a.yt-simple-endpoint')
+      if ($firstResult) {
+        $firstResult.click()
+      }
+    })
   }
 
   async fetchState() {
