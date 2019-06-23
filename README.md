@@ -1,6 +1,8 @@
 # devtube
 
-Play Youtube music via command line
+[![npm package](https://img.shields.io/npm/v/devtube.svg?color=%2350c72b&style=flat-square)](https://www.npmjs.com/package/devtube)
+
+Play Youtube music via your terminal. No ads, no auto paused 🎵💥✨
 
 <p align="center">
 	<br>
