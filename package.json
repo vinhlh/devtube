@@ -1,6 +1,6 @@
 {
   "name": "devtube",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "keywords": [
     "youtube",
     "youtube-cli",
@@ -13,8 +13,8 @@
   "description": "Play Youtube music via command line",
   "main": "dist/index.js",
   "scripts": {
-    "start": "tsc -w --esModuleInterop",
-    "build": "tsc --esModuleInterop"
+    "start": "tsc -w",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

@@ -32,6 +32,10 @@ Example: `devtube "https://www.youtube.com/watch?v=VjHMDlAPMUw"`
 
 ## CHANGELOGs
 
+### 1.0.8
+
+- Support `version` parameter.
+
 ### 1.0.7
 
 - Fix headless mode accidentally on.

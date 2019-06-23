@@ -3,6 +3,7 @@
 import chalk from 'chalk'
 import program from 'commander'
 
+import pkg from '../package.json'
 import App from './app'
 
 const runApp = async (playlistUrl: string) => {
@@ -15,6 +16,7 @@ const runApp = async (playlistUrl: string) => {
 }
 
 program
+  .version(pkg.version)
   .arguments('devtube <playlist>')
   .action(runApp)
   .parse(process.argv)
