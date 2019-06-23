@@ -32,6 +32,10 @@ Example: `devtube "https://www.youtube.com/watch?v=VjHMDlAPMUw"`
 
 ## CHANGELOGs
 
+### 1.0.7
+
+- Fix headless mode accidentally on.
+
 ### 1.0.6
 
 - Support starting by searching a keywod.

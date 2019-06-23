@@ -68,7 +68,7 @@ class App {
 
   async initBrowser() {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       ignoreDefaultArgs: ['--mute-audio']
     })
 

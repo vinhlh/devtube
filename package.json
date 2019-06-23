@@ -1,11 +1,14 @@
 {
   "name": "devtube",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "keywords": [
     "youtube",
     "youtube-cli",
     "player",
-    "youtube-player"
+    "youtube-player",
+    "terminal",
+    "music",
+    "command-line"
   ],
   "description": "Play Youtube music via command line",
   "main": "dist/index.js",
